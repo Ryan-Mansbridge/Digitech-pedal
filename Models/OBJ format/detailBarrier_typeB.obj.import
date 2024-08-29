@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://lx3eaq5tqx53"
+path="res://.godot/imported/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh"]
+
+source_file="res://Models/OBJ format/detailBarrier_typeB.obj"
+dest_files=["res://.godot/imported/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh", "res://.godot/imported/detailBarrier_typeB.obj-0e87474c6f856e72f2d40ba070de2250.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

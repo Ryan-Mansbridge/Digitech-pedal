@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8fh1rfpqi7kb"
+path="res://.godot/imported/wallFence.obj-3cd16cac2f86692b15f3b3896960f272.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallFence.obj-3cd16cac2f86692b15f3b3896960f272.mesh"]
+
+source_file="res://Models/OBJ format/wallFence.obj"
+dest_files=["res://.godot/imported/wallFence.obj-3cd16cac2f86692b15f3b3896960f272.mesh", "res://.godot/imported/wallFence.obj-3cd16cac2f86692b15f3b3896960f272.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

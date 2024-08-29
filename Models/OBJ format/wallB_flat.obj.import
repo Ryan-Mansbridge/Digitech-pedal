@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c23es0mymu33a"
+path="res://.godot/imported/wallB_flat.obj-78e9404fe5966270c171bd34292bccbc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wallB_flat.obj-78e9404fe5966270c171bd34292bccbc.mesh"]
+
+source_file="res://Models/OBJ format/wallB_flat.obj"
+dest_files=["res://.godot/imported/wallB_flat.obj-78e9404fe5966270c171bd34292bccbc.mesh", "res://.godot/imported/wallB_flat.obj-78e9404fe5966270c171bd34292bccbc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

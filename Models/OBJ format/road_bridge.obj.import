@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0do0y4u6f60b"
+path="res://.godot/imported/road_bridge.obj-1344434314c9971149155dabae1db2e3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_bridge.obj-1344434314c9971149155dabae1db2e3.mesh"]
+
+source_file="res://Models/OBJ format/road_bridge.obj"
+dest_files=["res://.godot/imported/road_bridge.obj-1344434314c9971149155dabae1db2e3.mesh", "res://.godot/imported/road_bridge.obj-1344434314c9971149155dabae1db2e3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

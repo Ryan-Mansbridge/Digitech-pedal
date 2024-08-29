@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://hfxdld76y0e7"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_l1my3"]
+[ext_resource type="PackedScene" uid="uid://1xsmolqniurc" path="res://game.tscn" id="2_iaamf"]
+[ext_resource type="PackedScene" uid="uid://ccpy1n0li44du" path="res://car_2.tscn" id="2_u83pd"]
+[ext_resource type="Texture2D" uid="uid://bqa34h74jk84u" path="res://DSCF8653.JPG" id="3_lv5j2"]
+[ext_resource type="AudioStream" uid="uid://deu61ev86yx61" path="res://TitleMusic.mp3" id="4_wm226"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q3o3i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5q8o4"]
+font_size = 50
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_c5g76"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g5u82"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_12kvd"]
+font_size = 100
+outline_size = 20
+outline_color = Color(0, 0, 0, 0.8)
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_l1my3")
+player_scene = ExtResource("2_u83pd")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22444, 17.5035, -1.30432)
+
+[node name="game" parent="." instance=ExtResource("2_iaamf")]
+transform = Transform3D(-1.09278e-06, 8.71967e-15, 25, 8.71967e-15, 25, -8.71967e-15, -25, 8.71967e-15, -1.09278e-06, -75.2944, -0.967489, 93.0768)
+
+[node name="Area3D" type="Area3D" parent="game"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="game/Area3D"]
+transform = Transform3D(1, -2.98195e-22, -3.87779e-14, -2.96131e-22, 1, -1.02828e-23, 1.12133e-14, -1.45716e-23, 1, 5.35116, 0, 3.00491)
+shape = SubResource("BoxShape3D_q3o3i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581.875, 350)
+scale = Vector2(0.363434, 0.281454)
+texture = ExtResource("3_lv5j2")
+
+[node name="Host" type="Button" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 14.0
+offset_top = 403.0
+offset_right = 526.0
+offset_bottom = 503.0
+button_mask = 7
+text = "Host
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 403.0
+offset_right = 526.0
+offset_bottom = 497.0
+text = "HOST"
+label_settings = SubResource("LabelSettings_5q8o4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Join" type="Button" parent="CanvasLayer"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 13.0
+offset_top = 525.0
+offset_right = 527.0
+offset_bottom = 622.0
+text = "Join
+"
+icon = SubResource("ViewportTexture_c5g76")
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 525.0
+offset_right = 525.0
+offset_bottom = 622.0
+text = "JOIN"
+label_settings = SubResource("LabelSettings_g5u82")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 37.0
+offset_right = 696.0
+offset_bottom = 188.0
+text = "CITY SLICKER
+"
+label_settings = SubResource("LabelSettings_12kvd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("4_wm226")
+volume_db = -17.36
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://car_2.tscn")
+spawn_path = NodePath("../Spawnpoint")
+spawn_limit = 2
+
+[node name="Spawnpoint" type="Node3D" parent="."]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, -6.91292, 4.73853, -5.13661)
+
+[connection signal="pressed" from="CanvasLayer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/Join" to="." method="_on_join_pressed"]

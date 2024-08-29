@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bymhrkt5n2asa"
+path="res://.godot/imported/balconyLadder_top.obj-3506e1ef342e08954483d4459b1fb231.mesh"
+
+[deps]
+
+files=["res://.godot/imported/balconyLadder_top.obj-3506e1ef342e08954483d4459b1fb231.mesh"]
+
+source_file="res://Models/OBJ format/balconyLadder_top.obj"
+dest_files=["res://.godot/imported/balconyLadder_top.obj-3506e1ef342e08954483d4459b1fb231.mesh", "res://.godot/imported/balconyLadder_top.obj-3506e1ef342e08954483d4459b1fb231.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

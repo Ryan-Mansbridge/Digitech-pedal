@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bbcgep8pnxrvr"
+path.s3tc="res://.godot/imported/caution_signs_set_2_1.png-a8442246c145f9087f0845c91d3241c1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "80405ff954d82d42c397b261b227dc50"
+}
+
+[deps]
+
+source_file="res://caution_signs_set_2_1.png"
+dest_files=["res://.godot/imported/caution_signs_set_2_1.png-a8442246c145f9087f0845c91d3241c1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=8
+roughness/src_normal="res://caution_signs_set_2_2.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

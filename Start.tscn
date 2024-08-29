@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=3 uid="uid://dww3gvtt276cl"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Maps/Map-1/Ground.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/Monteri.tscn" id="2"]
+[ext_resource type="Environment" uid="uid://1g2w8jrb81qa" path="res://Scenes/LightingEnvironment.tres" id="3"]
+[ext_resource type="PackedScene" path="res://Scenes/Status/Status.tscn" id="4"]
+[ext_resource type="Script" path="res://Scenes/Camera.gd" id="5"]
+[ext_resource type="Script" path="res://Scenes/Start.gd" id="6"]
+[ext_resource type="AudioStream" uid="uid://nxrcn5bkrojd" path="res://Scenes/VehicleController/F30.wav" id="7"]
+[ext_resource type="Script" path="res://Scenes/Player.gd" id="8"]
+[ext_resource type="AudioStream" uid="uid://savta7ea4s4f" path="res://Scenes/VehicleController/F110.wav" id="9"]
+[ext_resource type="AudioStream" uid="uid://bjeaql3u4ws4o" path="res://Scenes/VehicleController/F60.wav" id="10"]
+[ext_resource type="Script" path="res://Scenes/MotorSoundController.gd" id="11"]
+
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(500, 160, 20)
+
+[sub_resource type="CylinderShape3D" id="2"]
+height = 0.312566
+radius = 0.869148
+
+[sub_resource type="BoxShape3D" id="3"]
+size = Vector3(1.01001, 0.300068, 0.965722)
+
+[node name="Start" type="Node"]
+script = ExtResource("6")
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("8")
+
+[node name="Status" parent="." instance=ExtResource("4")]
+layout_mode = 3
+anchors_preset = 15
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3")
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.987557, -0.153009, 0.0363167, 0, 0.230934, 0.972969, -0.15726, -0.960863, 0.228061, 12.6107, 337.858, 79.1927)
+shadow_enabled = true
+
+[node name="Ground" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, -7.45058e-09, 1.21072e-08, -3.72529e-09, 1, -1.49012e-08, -3.72529e-09, -1.49012e-08, 1, 9.53674e-07, 0, 7.62939e-06)
+
+[node name="GroundLimits" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape3D" parent="GroundLimits"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 260)
+shape = SubResource("1")
+
+[node name="CollisionShape2" type="CollisionShape3D" parent="GroundLimits"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -260)
+shape = SubResource("1")
+
+[node name="CollisionShape3" type="CollisionShape3D" parent="GroundLimits"]
+transform = Transform3D(-1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 260, 0, 0)
+shape = SubResource("1")
+
+[node name="CollisionShape4" type="CollisionShape3D" parent="GroundLimits"]
+transform = Transform3D(-1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -260, 0, 0)
+shape = SubResource("1")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(-0.465637, 0.205813, -0.860711, 0, 0.972582, 0.232564, 0.884976, 0.10829, -0.452869, -4.7705, 1.66247, -2.73375)
+fov = 40.0
+near = 0.2
+far = 900.0
+script = ExtResource("5")
+target_node = NodePath("../Monteri/CameraTarget")
+vehicle_controller_node = NodePath("../Monteri")
+
+[node name="Monteri" parent="." instance=ExtResource("2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+
+[node name="CameraTarget" type="Node3D" parent="Monteri"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.872167, 0)
+
+[node name="CollisionShapeFront" type="CollisionShape3D" parent="Monteri"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0387166, -1.51218)
+shape = SubResource("2")
+
+[node name="CollisionShapeTop" type="CollisionShape3D" parent="Monteri"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.763991, 0.559802)
+shape = SubResource("3")
+
+[node name="MotorSoundController" type="Node" parent="Monteri"]
+script = ExtResource("11")
+f1_node = NodePath("../F1")
+f2_node = NodePath("../F2")
+f3_node = NodePath("../F3")
+
+[node name="F1" type="AudioStreamPlayer3D" parent="Monteri"]
+stream = ExtResource("7")
+attenuation_model = 3
+bus = &"Low"
+
+[node name="F2" type="AudioStreamPlayer3D" parent="Monteri"]
+stream = ExtResource("10")
+attenuation_model = 3
+bus = &"Dominant"
+
+[node name="F3" type="AudioStreamPlayer3D" parent="Monteri"]
+stream = ExtResource("9")
+attenuation_model = 3
+bus = &"High"

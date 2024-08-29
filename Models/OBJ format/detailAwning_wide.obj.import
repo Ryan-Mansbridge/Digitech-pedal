@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d336it5v7xmwc"
+path="res://.godot/imported/detailAwning_wide.obj-556842a0f691948a6ab565ed1fe30f8f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/detailAwning_wide.obj-556842a0f691948a6ab565ed1fe30f8f.mesh"]
+
+source_file="res://Models/OBJ format/detailAwning_wide.obj"
+dest_files=["res://.godot/imported/detailAwning_wide.obj-556842a0f691948a6ab565ed1fe30f8f.mesh", "res://.godot/imported/detailAwning_wide.obj-556842a0f691948a6ab565ed1fe30f8f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

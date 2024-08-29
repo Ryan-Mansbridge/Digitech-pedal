@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qiu0lpot8bwi"
+path="res://.godot/imported/roadAsphalt_cornerOuter.obj-b59685c7563022fd8638100ccb739231.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadAsphalt_cornerOuter.obj-b59685c7563022fd8638100ccb739231.mesh"]
+
+source_file="res://Models/OBJ format/roadAsphalt_cornerOuter.obj"
+dest_files=["res://.godot/imported/roadAsphalt_cornerOuter.obj-b59685c7563022fd8638100ccb739231.mesh", "res://.godot/imported/roadAsphalt_cornerOuter.obj-b59685c7563022fd8638100ccb739231.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

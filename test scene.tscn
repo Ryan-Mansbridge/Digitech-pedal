@@ -1,0 +1,226 @@
+[gd_scene load_steps=15 format=3 uid="uid://30ipmt28svbw"]
+
+[ext_resource type="PackedScene" uid="uid://1xsmolqniurc" path="res://game.tscn" id="1_eblsh"]
+[ext_resource type="Script" path="res://test_scene.gd" id="1_xcsfg"]
+[ext_resource type="PackedScene" uid="uid://ccpy1n0li44du" path="res://car_2.tscn" id="2_qid7f"]
+[ext_resource type="PackedScene" uid="uid://dr3iols4m8syi" path="res://car_1.tscn" id="3_s6hhi"]
+[ext_resource type="AudioStream" uid="uid://dn71yytx6f77o" path="res://Game menu screen.mp3" id="3_ydpvh"]
+[ext_resource type="PackedScene" uid="uid://fyq422u36uch" path="res://car_3.tscn" id="4_alh12"]
+[ext_resource type="PackedScene" uid="uid://dj73yh4st7uym" path="res://car_4.tscn" id="5_ihnfx"]
+[ext_resource type="Texture2D" uid="uid://bqa34h74jk84u" path="res://DSCF8653.JPG" id="7_fwqc5"]
+[ext_resource type="AudioStream" uid="uid://dwm2gpjvfst6y" path="res://menu music.mp3" id="8_5wej1"]
+[ext_resource type="FontFile" uid="uid://b0xfvoblvndam" path="res://hirosh/HIROSHT.TTF" id="9_u8mbf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jtrca"]
+line_spacing = 2.08165e-12
+font = ExtResource("9_u8mbf")
+font_size = 300
+outline_color = Color(1.24107e-06, 0.535841, 0.627734, 1)
+shadow_size = 40
+shadow_color = Color(0.871508, 0.813307, 0.876054, 1)
+
+[sub_resource type="FontFile" id="FontFile_80f5m"]
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xfgea"]
+font = SubResource("FontFile_80f5m")
+font_size = 80
+outline_size = 20
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nb5gt"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_xcsfg")
+
+[node name="game" parent="." instance=ExtResource("1_eblsh")]
+transform = Transform3D(-8.74228e-07, 6.97574e-15, 20, 6.97574e-15, 20, -6.97574e-15, -20, 6.97574e-15, -8.74228e-07, -59.1924, -0.0447387, 22.7052)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("3_ydpvh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(2560, 1664)
+layout_mode = 2
+columns = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1278, 830)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_qid7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79142, 1.169, -6.43538)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(1278, 830)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_s6hhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22748, 1.51771, 0)
+
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer3"]
+handle_input_locally = false
+size = Vector2i(1278, 830)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer3/SubViewport" instance=ExtResource("4_alh12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41929, 1.25194, -13.7492)
+
+[node name="SubViewportContainer4" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer4"]
+handle_input_locally = false
+size = Vector2i(1278, 830)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer4/SubViewport" instance=ExtResource("5_ihnfx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66171, 1.1397, -20.0648)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("8_5wej1")
+volume_db = -10.0
+autoplay = true
+
+[node name="Container" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 2.758
+anchor_bottom = 3.224
+offset_right = -56.2162
+offset_bottom = -983.152
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Container"]
+position = Vector2(1553, 1002.15)
+scale = Vector2(1, 0.898)
+texture = ExtResource("7_fwqc5")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 203.0
+offset_top = 145.0
+offset_right = 3324.0
+offset_bottom = 853.0
+text = "City
+   Slicker"
+label_settings = SubResource("LabelSettings_jtrca")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 203.0
+offset_top = 1466.0
+offset_right = 2660.0
+offset_bottom = 2747.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "START GAME"
+label_settings = SubResource("LabelSettings_xfgea")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/Label2"]
+visible = false
+layout_mode = 2
+anchor_left = -0.78836
+anchor_top = -16.6049
+anchor_right = -0.78836
+anchor_bottom = -16.6049
+offset_top = 85.0
+offset_right = 2457.0
+offset_bottom = 1417.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "START GAME"
+icon = SubResource("CanvasTexture_nb5gt")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "FULLSCREEN"
+label_settings = SubResource("LabelSettings_xfgea")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/Label4"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+anchor_left = -0.780627
+anchor_top = -1.16049
+anchor_right = -0.780627
+anchor_bottom = -0.54321
+offset_top = 85.0
+offset_right = 2457.0
+offset_bottom = 116.0
+text = "SOUND SETTINGS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "SOUND ON/OFF"
+label_settings = SubResource("LabelSettings_xfgea")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer/Label3"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+anchor_left = -0.746439
+anchor_top = -1.09877
+anchor_right = -0.746439
+anchor_bottom = -0.37037
+offset_top = 85.0
+offset_right = 2457.0
+offset_bottom = 116.0
+text = "FULLSCREEN"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Label2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Label3/Button3" to="." method="_on_button_3_pressed"]

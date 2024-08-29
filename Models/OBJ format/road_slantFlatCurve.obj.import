@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkmf1ryfegg1u"
+path="res://.godot/imported/road_slantFlatCurve.obj-89043b421e89bda753ba978b546d17af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_slantFlatCurve.obj-89043b421e89bda753ba978b546d17af.mesh"]
+
+source_file="res://Models/OBJ format/road_slantFlatCurve.obj"
+dest_files=["res://.godot/imported/road_slantFlatCurve.obj-89043b421e89bda753ba978b546d17af.mesh", "res://.godot/imported/road_slantFlatCurve.obj-89043b421e89bda753ba978b546d17af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

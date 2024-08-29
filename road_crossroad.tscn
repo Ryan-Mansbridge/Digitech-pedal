@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpd6jabga67qp"]
+
+[ext_resource type="PackedScene" uid="uid://ej4okqo5mtvo" path="res://Models/DAE format/road_crossroad.dae" id="1_sk04b"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0kkvg"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.02, -0.5, 0.5, 0, -0.5, -0.5, 0.02, 0.5, 0.5, 0, 0.5, 0.5, 0.02, -0.5, 0.5, 0.02, 0.5)
+
+[node name="road_crossroad" instance=ExtResource("1_sk04b")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." index="2"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+lock_rotation = true
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_0kkvg")
