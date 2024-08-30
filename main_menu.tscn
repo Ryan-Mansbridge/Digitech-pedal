@@ -1,0 +1,209 @@
+[gd_scene load_steps=8 format=3 uid="uid://fuee2ubkwmws"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_smtmg"]
+[ext_resource type="Texture2D" uid="uid://bqa34h74jk84u" path="res://DSCF8653.JPG" id="2_tuk18"]
+[ext_resource type="AudioStream" uid="uid://dwm2gpjvfst6y" path="res://menu music.mp3" id="3_wm71k"]
+[ext_resource type="FontFile" uid="uid://b0xfvoblvndam" path="res://hirosh/HIROSHT.TTF" id="4_t0arl"]
+
+[sub_resource type="FontFile" id="FontFile_80f5m"]
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/80/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/80/0/glyphs/0/size = Vector2(0, 0)
+cache/0/80/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/80/0/glyphs/0/texture_idx = -1
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/20 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/20 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/30/20 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/30/10 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/30/8 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/20 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/20 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/20 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/10 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/8 = Vector2(0, 0)
+cache/0/80/20/glyphs/0/offset = Vector2(0, 0)
+cache/0/80/20/glyphs/0/size = Vector2(0, 0)
+cache/0/80/20/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/80/20/glyphs/0/texture_idx = -1
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/50/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/50/0/glyphs/0/size = Vector2(0, 0)
+cache/0/50/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/50/0/glyphs/0/texture_idx = -1
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/20 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/20 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/30/20 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/30/10 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/30/8 = Vector2(0, 0)
+cache/0/50/20/glyphs/0/offset = Vector2(0, 0)
+cache/0/50/20/glyphs/0/size = Vector2(0, 0)
+cache/0/50/20/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/50/20/glyphs/0/texture_idx = -1
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/30/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/30/0/glyphs/0/size = Vector2(0, 0)
+cache/0/30/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/30/0/glyphs/0/texture_idx = -1
+cache/0/30/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/80/20 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/50/20 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/20 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/10 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/8 = Vector2(0, 0)
+cache/0/30/20/glyphs/0/offset = Vector2(0, 0)
+cache/0/30/20/glyphs/0/size = Vector2(0, 0)
+cache/0/30/20/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/30/20/glyphs/0/texture_idx = -1
+cache/0/30/10/glyphs/0/offset = Vector2(0, 0)
+cache/0/30/10/glyphs/0/size = Vector2(0, 0)
+cache/0/30/10/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/30/10/glyphs/0/texture_idx = -1
+cache/0/30/8/glyphs/0/offset = Vector2(0, 0)
+cache/0/30/8/glyphs/0/size = Vector2(0, 0)
+cache/0/30/8/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/30/8/glyphs/0/texture_idx = -1
+
+[sub_resource type="LabelSettings" id="LabelSettings_ilyol"]
+font = SubResource("FontFile_80f5m")
+font_size = 30
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5t0t"]
+font = ExtResource("4_t0arl")
+font_size = 110
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_smtmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(581.75, 300.875)
+scale = Vector2(0.357384, 0.311377)
+texture = ExtResource("2_tuk18")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 556.0
+offset_right = 2474.0
+offset_bottom = 646.0
+text = "SOUND ON/OFF
+
+
+
+"
+label_settings = SubResource("LabelSettings_ilyol")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Button" parent="Label4"]
+modulate = Color(0, 0, 0, 0)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+anchor_left = -0.905576
+anchor_top = -0.977778
+anchor_right = -0.905576
+anchor_bottom = -0.922222
+offset_top = 85.0
+offset_right = 2457.0
+offset_bottom = 116.0
+text = "SOUND SETTINGS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 520.0
+offset_right = 2474.0
+offset_bottom = 610.0
+text = "START GAME
+
+
+
+"
+label_settings = SubResource("LabelSettings_ilyol")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Label7"]
+modulate = Color(0, 0, 0, 0)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+anchor_left = -0.919414
+anchor_top = -1.02222
+anchor_right = -0.919414
+anchor_bottom = -0.966667
+offset_top = 85.0
+offset_right = 2457.0
+offset_bottom = 116.0
+scale = Vector2(1, 1.18058)
+text = "SOUND SETTINGS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 596.0
+offset_right = 2475.0
+offset_bottom = 677.0
+text = "EXIT GAME"
+label_settings = SubResource("LabelSettings_ilyol")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="Label5"]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 167.0
+offset_bottom = 29.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wm71k")
+volume_db = -10.0
+autoplay = true
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 994.0
+offset_bottom = 280.0
+text = "CITY 
+     SLICKERS"
+label_settings = SubResource("LabelSettings_a5t0t")
+
+[connection signal="pressed" from="Label4/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Label7/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Label5/Button4" to="." method="_on_button_4_pressed"]

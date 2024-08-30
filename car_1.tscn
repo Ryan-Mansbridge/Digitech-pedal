@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr3iols4m8syi"]
+[gd_scene load_steps=9 format=3 uid="uid://dr3iols4m8syi"]
 
 [ext_resource type="PackedScene" uid="uid://ccpy1n0li44du" path="res://car_2.tscn" id="1_o110a"]
 [ext_resource type="Script" path="res://car_1.gd" id="2_81dx8"]
 [ext_resource type="PackedScene" uid="uid://b5r48vpmp10of" path="res://subaru_impreza.glb" id="2_jlle3"]
+[ext_resource type="Texture2D" uid="uid://c0b7loh6y2fhs" path="res://Models/FBX format/Textures/asphalt.png" id="4_fk2yg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4m5j"]
 load_path = "res://.godot/imported/subaru_impreza_0.jpg-ad1b5fe78cf024c14bf4ea7994b42e97.s3tc.ctex"
@@ -10,68 +11,24 @@ load_path = "res://.godot/imported/subaru_impreza_0.jpg-ad1b5fe78cf024c14bf4ea79
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kxq1"]
 albedo_texture = SubResource("CompressedTexture2D_i4m5j")
 
-[node name="car2" instance=ExtResource("1_o110a")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5a8h"]
+albedo_texture = ExtResource("4_fk2yg")
+
+[sub_resource type="PrismMesh" id="PrismMesh_obr2r"]
+
+[node name="car3" instance=ExtResource("1_o110a")]
 script = ExtResource("2_81dx8")
 
 [node name="Root" parent="." index="8"]
 visible = false
 
-[node name="Mitsubishi_Body_003_0" parent="Root/Car Rig_001/Skeleton3D" index="0"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, -1.00701, -2.42067, 1.42509)
-
-[node name="Mitsubishi_Body_003_1" parent="Root/Car Rig_001/Skeleton3D" index="1"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, -1.00701, -2.42067, 1.42509)
-
-[node name="Mitsubishi_Body_002_0" parent="Root/Car Rig_001/Skeleton3D" index="2"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 0.00078, -1.67119, 1.11738)
-
-[node name="Mitsubishi_Body_002_1" parent="Root/Car Rig_001/Skeleton3D" index="3"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 0.00078, -1.67119, 1.11738)
-
-[node name="Mitsubishi_Body_0" parent="Root/Car Rig_001/Skeleton3D" index="4"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 0.00078, -1.67119, 1.11738)
-
 [node name="Mitsubishi_Body_0" parent="Root/Car Rig_001/Skeleton3D/Mitsubishi_Body_0" index="0"]
 material_override = SubResource("StandardMaterial3D_8kxq1")
 
-[node name="Mitsubishi_Body_1" parent="Root/Car Rig_001/Skeleton3D" index="5"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 0.00078, -1.67119, 1.11738)
-
-[node name="Plane_004_0" parent="Root/Car Rig_001/Skeleton3D" index="6"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, -1.03926, 0.0297691, 0.4752)
-
-[node name="Plane_002_0" parent="Root/Car Rig_001/Skeleton3D" index="7"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, -0.988993, -3.4234, 0.465453)
-
-[node name="Plane_001_0" parent="Root/Car Rig_001/Skeleton3D" index="8"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 1.01194, -3.40389, 0.458944)
-
-[node name="Plane_0" parent="Root/Car Rig_001/Skeleton3D" index="9"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 1.05025, 0.0442352, 0.467963)
-
-[node name="Circle_005_0" parent="Root/Car Rig_001/Skeleton3D" index="10"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, -0.458088, -0.562174, 1.94106)
-
-[node name="Circle_002_0" parent="Root/Car Rig_001/Skeleton3D" index="11"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 0.462493, -0.562173, 1.94106)
-
-[node name="Circle_003_0" parent="Root/Car Rig_001/Skeleton3D" index="12"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, -6.79963e-05, -1.00315, 1.94107)
-
-[node name="Circle_0" parent="Root/Car Rig_001/Skeleton3D" index="13"]
-transform = Transform3D(0.999999, -1.7787e-06, 0.00146999, -1.7787e-06, 0.999997, 0.00242, -0.00146999, -0.00242, 0.999996, 0.62892, 1.20756, 0.297157)
-
-[node name="Mitsubishi_Wheel_Ft_L_0" parent="Root/Car Rig_001/Skeleton3D" index="14"]
-transform = Transform3D(0.999996, 0.0028, 0, -0.0028, 0.999996, 0, 0, 0, 1, 0.977253, -3.38929, 0.46461)
-
-[node name="Mitsubishi_Wheel_Ft_R_0" parent="Root/Car Rig_001/Skeleton3D" index="15"]
-transform = Transform3D(0.999996, 0.0028, 0, -0.0028, 0.999996, 0, 0, 0, 1, -0.980847, -3.40016, 0.46939)
-
-[node name="Mitsubishi_Wheel_Bk_L_0" parent="Root/Car Rig_001/Skeleton3D" index="16"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00487, 0.01593, 0.46686)
-
-[node name="Mitsubishi_Wheel_Bk_R_0" parent="Root/Car Rig_001/Skeleton3D" index="17"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.98469, 0.01051, 0.48313)
-
 [node name="Sketchfab_Scene" parent="." index="9" instance=ExtResource("2_jlle3")]
 transform = Transform3D(0.011, 0, 0, 0, 0.011, 0, 0, 0, 0.011, -0.0831928, -0.756767, -0.10245)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="10"]
+transform = Transform3D(10, 0, -1.5246e-23, -1.5246e-22, -4.37114e-07, -1, 0, 10, -4.37114e-08, 2.08165e-12, -30, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_f5a8h")
+mesh = SubResource("PrismMesh_obr2r")

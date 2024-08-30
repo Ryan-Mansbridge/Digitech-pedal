@@ -1,0 +1,190 @@
+[gd_scene load_steps=12 format=3 uid="uid://30ipmt28svbw"]
+
+[ext_resource type="Script" path="res://test_scene.gd" id="1_ddtfj"]
+[ext_resource type="PackedScene" uid="uid://1xsmolqniurc" path="res://game.tscn" id="2_wpwuk"]
+[ext_resource type="AudioStream" uid="uid://dn71yytx6f77o" path="res://Game menu screen.mp3" id="3_6mq34"]
+[ext_resource type="PackedScene" uid="uid://ccpy1n0li44du" path="res://car_2.tscn" id="4_x4mbu"]
+[ext_resource type="PackedScene" uid="uid://dr3iols4m8syi" path="res://car_1.tscn" id="5_6lbhf"]
+[ext_resource type="PackedScene" uid="uid://fyq422u36uch" path="res://car_3.tscn" id="6_jir5f"]
+[ext_resource type="PackedScene" uid="uid://dj73yh4st7uym" path="res://car_4.tscn" id="7_q5xyj"]
+[ext_resource type="FontFile" uid="uid://c3noig7ri6ggm" path="res://draco/Draco.otf" id="8_lkrf3"]
+[ext_resource type="Texture2D" uid="uid://b4px7i8npgg7n" path="res://Models/FBX format/Textures/bars.png" id="9_8pu1g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4gxfi"]
+font = ExtResource("8_lkrf3")
+font_size = 100
+font_color = Color(0.777683, 0.613318, 0.0095572, 1)
+shadow_size = 20
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2n1br"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ddtfj")
+
+[node name="game" parent="." instance=ExtResource("2_wpwuk")]
+transform = Transform3D(-8.74228e-07, 6.97574e-15, 20, 6.97574e-15, 20, -6.97574e-15, -20, 6.97574e-15, -8.74228e-07, -59.1924, -0.0447387, 22.7052)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("3_6mq34")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(1080, 50)
+layout_mode = 2
+columns = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 322)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer/SubViewport" instance=ExtResource("4_x4mbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79142, 1.169, -6.43538)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(573, 322)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer2/SubViewport" instance=ExtResource("5_6lbhf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22748, 1.51771, 0)
+
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer3"]
+handle_input_locally = false
+size = Vector2i(574, 321)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer3/SubViewport" instance=ExtResource("6_jir5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41929, 1.25194, -13.7492)
+
+[node name="SubViewportContainer4" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer4"]
+handle_input_locally = false
+size = Vector2i(573, 321)
+render_target_update_mode = 4
+
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer4/SubViewport" instance=ExtResource("7_q5xyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66171, 1.1397, -20.0648)
+
+[node name="Countdown" type="CanvasLayer" parent="."]
+
+[node name="Countdown1" type="Label" parent="Countdown"]
+offset_left = 483.0
+offset_top = 274.0
+offset_right = 660.0
+offset_bottom = 369.0
+text = "1"
+label_settings = SubResource("LabelSettings_4gxfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown2" type="Label" parent="Countdown"]
+offset_left = 490.0
+offset_top = 274.0
+offset_right = 667.0
+offset_bottom = 369.0
+text = "2"
+label_settings = SubResource("LabelSettings_4gxfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown3" type="Label" parent="Countdown"]
+offset_left = 489.0
+offset_top = 277.0
+offset_right = 666.0
+offset_bottom = 372.0
+text = "3"
+label_settings = SubResource("LabelSettings_4gxfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown4" type="Label" parent="Countdown"]
+offset_left = 486.0
+offset_top = 277.0
+offset_right = 663.0
+offset_bottom = 372.0
+text = "4"
+label_settings = SubResource("LabelSettings_4gxfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown5" type="Label" parent="Countdown"]
+offset_left = 487.0
+offset_top = 277.0
+offset_right = 664.0
+offset_bottom = 372.0
+text = "5"
+label_settings = SubResource("LabelSettings_4gxfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiniMap" type="CanvasLayer" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="MiniMap"]
+position = Vector2(577.125, 320.375)
+scale = Vector2(295.75, 189.25)
+mesh = SubResource("QuadMesh_2n1br")
+texture = ExtResource("9_8pu1g")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -91.0
+offset_right = 141.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MiniMap/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(280, 173)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MiniMap/SubViewportContainer/SubViewport"]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1.5246e-23, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -147.147, -66.836, 26.4239)
+projection = 1
+fov = 117.5
+size = 600.0
+near = 10.0
+far = 300.0
