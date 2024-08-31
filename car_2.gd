@@ -2,6 +2,7 @@ extends VehicleBody3D
 
 const MAX_STEER = 0.8
 const ENGINE_POWER = 300
+var lapcar2 = 0
 
 @onready var camera_pivot = $CameraPivot
 @onready var camera_3d = $CameraPivot/Camera3D
@@ -25,9 +26,12 @@ func _physics_process(delta):
 	reverse_camera.look_at(look_at)
 	_check_camera_switch()
 
-
 func _check_camera_switch():
 	if linear_velocity.dot(transform.basis.z) > -0.1:
 		camera_3d.current = true
 	else:
 		reverse_camera.current = true
+
+func _on_car_2_lapcounter_area_entered(area):
+	get_tree().change_scene_to_file('res://Whitewin.tscn')
+

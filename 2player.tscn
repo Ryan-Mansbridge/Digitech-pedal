@@ -1,0 +1,363 @@
+[gd_scene load_steps=14 format=3 uid="uid://hi0saclyywc8"]
+
+[ext_resource type="Script" path="res://test_scene.gd" id="1_b6tir"]
+[ext_resource type="PackedScene" uid="uid://1xsmolqniurc" path="res://game.tscn" id="1_kq4x6"]
+[ext_resource type="AudioStream" uid="uid://dn71yytx6f77o" path="res://Game menu screen.mp3" id="2_0kxix"]
+[ext_resource type="PackedScene" uid="uid://dr3iols4m8syi" path="res://car_1.tscn" id="3_x4ijr"]
+[ext_resource type="PackedScene" uid="uid://ccpy1n0li44du" path="res://car_2.tscn" id="4_5iuah"]
+[ext_resource type="FontFile" uid="uid://c3noig7ri6ggm" path="res://draco/Draco.otf" id="5_03liu"]
+[ext_resource type="Texture2D" uid="uid://b4px7i8npgg7n" path="res://Models/FBX format/Textures/bars.png" id="6_f7k6c"]
+[ext_resource type="Texture2D" uid="uid://b3kyf8y5xj62b" path="res://plain-black-background-02fh7564l8qq4m6d.jpg" id="8_exorh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6pm5"]
+font = ExtResource("5_03liu")
+font_size = 100
+font_color = Color(0.777683, 0.613318, 0.0095572, 1)
+shadow_size = 20
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ai7nv"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_us7nb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rjx16"]
+font = ExtResource("5_03liu")
+font_size = 40
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_egxsw"]
+
+[node name="2player" type="Node3D"]
+script = ExtResource("1_b6tir")
+
+[node name="game" parent="." instance=ExtResource("1_kq4x6")]
+transform = Transform3D(-8.74228e-07, 6.97574e-15, 20, 6.97574e-15, 20, -6.97574e-15, -20, 6.97574e-15, -8.74228e-07, -59.1924, -0.0447387, 22.7052)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("2_0kxix")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(1080, 50)
+layout_mode = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1151, 322)
+render_target_update_mode = 4
+
+[node name="car3" parent="MarginContainer/GridContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_x4ijr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22748, 1.51771, 0)
+
+[node name="SubViewportContainer4" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/GridContainer/SubViewportContainer4"]
+handle_input_locally = false
+size = Vector2i(1151, 321)
+render_target_update_mode = 4
+
+[node name="car3" parent="MarginContainer/GridContainer/SubViewportContainer4/SubViewport" instance=ExtResource("4_5iuah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10066, 1.54504, -0.155714)
+
+[node name="Countdown" type="CanvasLayer" parent="."]
+
+[node name="Countdown1" type="Label" parent="Countdown"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 483.0
+offset_top = 274.0
+offset_right = -492.0
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+label_settings = SubResource("LabelSettings_w6pm5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown2" type="Label" parent="Countdown"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 490.0
+offset_top = 274.0
+offset_right = -485.0
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+label_settings = SubResource("LabelSettings_w6pm5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown3" type="Label" parent="Countdown"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 489.0
+offset_top = 277.0
+offset_right = -486.0
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+label_settings = SubResource("LabelSettings_w6pm5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown4" type="Label" parent="Countdown"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 486.0
+offset_top = 277.0
+offset_right = -489.0
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "4"
+label_settings = SubResource("LabelSettings_w6pm5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown5" type="Label" parent="Countdown"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 487.0
+offset_top = 277.0
+offset_right = -488.0
+offset_bottom = -276.0
+text = "5"
+label_settings = SubResource("LabelSettings_w6pm5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiniMap" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="MiniMap"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -322.0
+offset_right = 577.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="MiniMap/Control"]
+position = Vector2(135.5, 414)
+scale = Vector2(243, 154)
+mesh = SubResource("QuadMesh_ai7nv")
+texture = ExtResource("6_f7k6c")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -552.0
+offset_top = 23.0
+offset_right = -330.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MiniMap/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(222, 136)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MiniMap/SubViewportContainer/SubViewport"]
+transform = Transform3D(4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -147.147, -66.836, 26.4239)
+projection = 1
+fov = 117.5
+size = 600.0
+near = 10.0
+far = 300.0
+
+[node name="MiniMap2" type="CanvasLayer" parent="MiniMap"]
+
+[node name="Control" type="Control" parent="MiniMap/MiniMap2"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -322.0
+offset_right = -279.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="MiniMap/MiniMap2/Control"]
+position = Vector2(130.531, 45)
+scale = Vector2(234.937, 150)
+mesh = SubResource("QuadMesh_ai7nv")
+texture = ExtResource("6_f7k6c")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MiniMap/MiniMap2"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -554.0
+offset_top = -343.0
+offset_right = -339.0
+offset_bottom = -209.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MiniMap/MiniMap2/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(215, 134)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MiniMap/MiniMap2/SubViewportContainer/SubViewport"]
+transform = Transform3D(4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -147.147, -66.836, 26.4239)
+projection = 1
+fov = 117.5
+size = 600.0
+near = 10.0
+far = 300.0
+
+[node name="Controls" type="CanvasLayer" parent="."]
+
+[node name="P4 Controls" type="Control" parent="Controls"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = 2.0
+offset_right = 283.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(170.5, 172.5)
+scale = Vector2(83, 47)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(285.5, 173.5)
+scale = Vector2(85, 47)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(394.5, 173.5)
+scale = Vector2(79.0001, 47)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(286.5, 124.5)
+scale = Vector2(82.9999, 49)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="CONTROLSP1" type="Label" parent="Controls/P4 Controls"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -22.0
+offset_right = 571.0
+offset_bottom = 316.0
+text = "↑
+←  ↓  →"
+label_settings = SubResource("LabelSettings_rjx16")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P3 Controls4" type="Control" parent="Controls"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -322.0
+offset_right = 238.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(172.5, 172.5)
+scale = Vector2(89, 47)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(281, 173.5)
+scale = Vector2(94, 47)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(391, 173.5)
+scale = Vector2(92, 47)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(289, 127)
+scale = Vector2(88, 44)
+mesh = SubResource("QuadMesh_us7nb")
+texture = ExtResource("8_exorh")
+
+[node name="CONTROLSP1" type="Label" parent="Controls/P3 Controls4"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 571.0
+offset_bottom = 316.0
+text = "W
+A S D"
+label_settings = SubResource("LabelSettings_rjx16")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 1.26311, 10.4275, -75.098)
+shape = SubResource("BoxShape3D_egxsw")

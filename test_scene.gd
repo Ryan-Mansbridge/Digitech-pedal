@@ -1,6 +1,6 @@
 extends Node3D
 
-
+var total_time_in_secs : int = 0 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = true
@@ -32,8 +32,8 @@ func _ready():
 	$Countdown/Countdown1.hide()
 	
 	$MiniMap.show()
+	$Controls.hide()
 	get_tree().paused = false
 	
 	pass # Replace with function body.
-
 

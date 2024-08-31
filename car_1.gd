@@ -8,6 +8,7 @@ const ENGINE_POWER = 300
 @onready var reverse_camera = $CameraPivot/ReverseCamera
 
 var look_at
+var lapcar1 = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,3 +33,6 @@ func _check_camera_switch():
 		camera_3d.current = true
 	else:
 		reverse_camera.current = true
+
+func _on_car_1_lapcounter_area_entered(area):
+	get_tree().change_scene_to_file('res://Bluewin.tscn')

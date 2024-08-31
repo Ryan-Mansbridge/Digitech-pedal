@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dr3iols4m8syi"]
+[gd_scene load_steps=10 format=3 uid="uid://dr3iols4m8syi"]
 
 [ext_resource type="PackedScene" uid="uid://ccpy1n0li44du" path="res://car_2.tscn" id="1_o110a"]
 [ext_resource type="Script" path="res://car_1.gd" id="2_81dx8"]
 [ext_resource type="PackedScene" uid="uid://b5r48vpmp10of" path="res://subaru_impreza.glb" id="2_jlle3"]
-[ext_resource type="Texture2D" uid="uid://c0b7loh6y2fhs" path="res://Models/FBX format/Textures/asphalt.png" id="4_fk2yg"]
+[ext_resource type="Texture2D" uid="uid://cuu7r3hlfsk4q" path="res://blue.jpeg" id="4_7dd05"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4m5j"]
 load_path = "res://.godot/imported/subaru_impreza_0.jpg-ad1b5fe78cf024c14bf4ea7994b42e97.s3tc.ctex"
@@ -11,16 +11,21 @@ load_path = "res://.godot/imported/subaru_impreza_0.jpg-ad1b5fe78cf024c14bf4ea79
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kxq1"]
 albedo_texture = SubResource("CompressedTexture2D_i4m5j")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5a8h"]
-albedo_texture = ExtResource("4_fk2yg")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ar7hl"]
+albedo_texture = ExtResource("4_7dd05")
 
 [sub_resource type="PrismMesh" id="PrismMesh_obr2r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8m2io"]
 
 [node name="car3" instance=ExtResource("1_o110a")]
 script = ExtResource("2_81dx8")
 
 [node name="Root" parent="." index="8"]
 visible = false
+
+[node name="Car Rig_001" parent="Root" index="0"]
+transform = Transform3D(1, 2.92015e-23, 1.31839e-30, -7.10281e-23, 1, -2.23821e-15, 4.74236e-32, 2.45582e-15, 1, -0.00792, 0.6556, 0.99198)
 
 [node name="Mitsubishi_Body_0" parent="Root/Car Rig_001/Skeleton3D/Mitsubishi_Body_0" index="0"]
 material_override = SubResource("StandardMaterial3D_8kxq1")
@@ -29,6 +34,20 @@ material_override = SubResource("StandardMaterial3D_8kxq1")
 transform = Transform3D(0.011, 0, 0, 0, 0.011, 0, 0, 0, 0.011, -0.0831928, -0.756767, -0.10245)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="10"]
-transform = Transform3D(10, 0, -1.5246e-23, -1.5246e-22, -4.37114e-07, -1, 0, 10, -4.37114e-08, 2.08165e-12, -30, 2.08165e-12)
-material_override = SubResource("StandardMaterial3D_f5a8h")
+transform = Transform3D(30, -1.99927e-29, 8.7391e-38, 0, -1.31134e-06, -3, 1.99927e-29, 30, -1.31134e-07, 2.08165e-12, -30, 2.08165e-12)
+material_override = SubResource("StandardMaterial3D_ar7hl")
 mesh = SubResource("PrismMesh_obr2r")
+
+[node name="triangle" parent="." index="11"]
+visible = false
+
+[node name="car1lapcounter" type="Area3D" parent="." index="12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="car1lapcounter" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8577, 0)
+shape = SubResource("BoxShape3D_8m2io")
+
+[node name="car2lapcounter" parent="." index="13"]
+visible = false
+
+[connection signal="area_entered" from="car1lapcounter" to="." method="_on_car_1_lapcounter_area_entered"]

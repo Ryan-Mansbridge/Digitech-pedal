@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://30ipmt28svbw"]
+[gd_scene load_steps=16 format=3 uid="uid://30ipmt28svbw"]
 
 [ext_resource type="Script" path="res://test_scene.gd" id="1_ddtfj"]
 [ext_resource type="PackedScene" uid="uid://1xsmolqniurc" path="res://game.tscn" id="2_wpwuk"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://fyq422u36uch" path="res://car_3.tscn" id="6_jir5f"]
 [ext_resource type="PackedScene" uid="uid://dj73yh4st7uym" path="res://car_4.tscn" id="7_q5xyj"]
 [ext_resource type="FontFile" uid="uid://c3noig7ri6ggm" path="res://draco/Draco.otf" id="8_lkrf3"]
+[ext_resource type="Texture2D" uid="uid://b3kyf8y5xj62b" path="res://plain-black-background-02fh7564l8qq4m6d.jpg" id="9_0qyk3"]
 [ext_resource type="Texture2D" uid="uid://b4px7i8npgg7n" path="res://Models/FBX format/Textures/bars.png" id="9_8pu1g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4gxfi"]
@@ -17,7 +18,15 @@ font_color = Color(0.777683, 0.613318, 0.0095572, 1)
 shadow_size = 20
 shadow_color = Color(1, 1, 1, 1)
 
+[sub_resource type="QuadMesh" id="QuadMesh_tleon"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g0el2"]
+font = ExtResource("8_lkrf3")
+font_size = 40
+
 [sub_resource type="QuadMesh" id="QuadMesh_2n1br"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ayicq"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ddtfj")
@@ -56,8 +65,8 @@ handle_input_locally = false
 size = Vector2i(574, 322)
 render_target_update_mode = 4
 
-[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer/SubViewport" instance=ExtResource("4_x4mbu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79142, 1.169, -6.43538)
+[node name="car3" parent="MarginContainer/GridContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_6lbhf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22748, 1.51771, 0)
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
 layout_mode = 2
@@ -70,8 +79,8 @@ handle_input_locally = false
 size = Vector2i(573, 322)
 render_target_update_mode = 4
 
-[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer2/SubViewport" instance=ExtResource("5_6lbhf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22748, 1.51771, 0)
+[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer2/SubViewport" instance=ExtResource("6_jir5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41929, 1.25194, -13.7492)
 
 [node name="SubViewportContainer3" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
 layout_mode = 2
@@ -84,8 +93,8 @@ handle_input_locally = false
 size = Vector2i(574, 321)
 render_target_update_mode = 4
 
-[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer3/SubViewport" instance=ExtResource("6_jir5f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41929, 1.25194, -13.7492)
+[node name="car3" parent="MarginContainer/GridContainer/SubViewportContainer3/SubViewport" instance=ExtResource("7_q5xyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66171, 1.1397, -20.0648)
 
 [node name="SubViewportContainer4" type="SubViewportContainer" parent="MarginContainer/GridContainer"]
 layout_mode = 2
@@ -98,66 +107,303 @@ handle_input_locally = false
 size = Vector2i(573, 321)
 render_target_update_mode = 4
 
-[node name="car2" parent="MarginContainer/GridContainer/SubViewportContainer4/SubViewport" instance=ExtResource("7_q5xyj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66171, 1.1397, -20.0648)
+[node name="car3" parent="MarginContainer/GridContainer/SubViewportContainer4/SubViewport" instance=ExtResource("4_x4mbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.79142, 1.169, -6.43538)
 
 [node name="Countdown" type="CanvasLayer" parent="."]
 
 [node name="Countdown1" type="Label" parent="Countdown"]
-offset_left = 483.0
-offset_top = 274.0
-offset_right = 660.0
-offset_bottom = 369.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 437.0
+offset_top = 233.0
+offset_right = -434.0
+offset_bottom = -241.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "1"
 label_settings = SubResource("LabelSettings_4gxfi")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Countdown2" type="Label" parent="Countdown"]
-offset_left = 490.0
-offset_top = 274.0
-offset_right = 667.0
-offset_bottom = 369.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = 233.0
+offset_right = -435.0
+offset_bottom = -245.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "2"
 label_settings = SubResource("LabelSettings_4gxfi")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Countdown3" type="Label" parent="Countdown"]
-offset_left = 489.0
-offset_top = 277.0
-offset_right = 666.0
-offset_bottom = 372.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 437.0
+offset_top = 234.0
+offset_right = -434.0
+offset_bottom = -245.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "3"
 label_settings = SubResource("LabelSettings_4gxfi")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Countdown4" type="Label" parent="Countdown"]
-offset_left = 486.0
-offset_top = 277.0
-offset_right = 663.0
-offset_bottom = 372.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 438.0
+offset_top = 234.0
+offset_right = -435.0
+offset_bottom = -247.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "4"
 label_settings = SubResource("LabelSettings_4gxfi")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Countdown5" type="Label" parent="Countdown"]
-offset_left = 487.0
-offset_top = 277.0
-offset_right = 664.0
-offset_bottom = 372.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 437.0
+offset_top = 232.0
+offset_right = -432.0
+offset_bottom = -246.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "5"
 label_settings = SubResource("LabelSettings_4gxfi")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Controls" type="CanvasLayer" parent="."]
+
+[node name="P3 Controls" type="Control" parent="Controls"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -570.0
+offset_top = 3.0
+offset_right = -5.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Controls/P3 Controls"]
+position = Vector2(172.5, 172.5)
+scale = Vector2(89, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Controls/P3 Controls"]
+position = Vector2(281, 173.5)
+scale = Vector2(94, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Controls/P3 Controls"]
+position = Vector2(388, 173.5)
+scale = Vector2(92, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Controls/P3 Controls"]
+position = Vector2(289, 127)
+scale = Vector2(88, 44)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="CONTROLSP1" type="Label" parent="Controls/P3 Controls"]
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 571.0
+offset_bottom = 316.0
+text = "Y
+G H J"
+label_settings = SubResource("LabelSettings_g0el2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P4 Controls" type="Control" parent="Controls"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 572.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(170.5, 172.5)
+scale = Vector2(83, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(285.5, 173.5)
+scale = Vector2(85, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(394.5, 173.5)
+scale = Vector2(79.0001, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Controls/P4 Controls"]
+position = Vector2(286.5, 124.5)
+scale = Vector2(82.9999, 49)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="CONTROLSP1" type="Label" parent="Controls/P4 Controls"]
+offset_left = -5.0
+offset_top = -22.0
+offset_right = 571.0
+offset_bottom = 316.0
+text = "↑
+←  ↓  →"
+label_settings = SubResource("LabelSettings_g0el2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P3 Controls3" type="Control" parent="Controls"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -327.0
+offset_right = 572.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Controls/P3 Controls3"]
+position = Vector2(204, 172.5)
+scale = Vector2(83.9999, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Controls/P3 Controls3"]
+position = Vector2(293.5, 173.5)
+scale = Vector2(83, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Controls/P3 Controls3"]
+position = Vector2(385, 173.5)
+scale = Vector2(76, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Controls/P3 Controls3"]
+position = Vector2(285, 127)
+scale = Vector2(96, 44)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="CONTROLSP1" type="Label" parent="Controls/P3 Controls3"]
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 571.0
+offset_bottom = 316.0
+text = "P
+L :  \""
+label_settings = SubResource("LabelSettings_g0el2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P3 Controls4" type="Control" parent="Controls"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -570.0
+offset_top = -322.0
+offset_right = -5.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(172.5, 172.5)
+scale = Vector2(89, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(281, 173.5)
+scale = Vector2(94, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(391, 173.5)
+scale = Vector2(92, 47)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Controls/P3 Controls4"]
+position = Vector2(289, 127)
+scale = Vector2(88, 44)
+mesh = SubResource("QuadMesh_tleon")
+texture = ExtResource("9_0qyk3")
+
+[node name="CONTROLSP1" type="Label" parent="Controls/P3 Controls4"]
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 571.0
+offset_bottom = 316.0
+text = "W
+A S D"
+label_settings = SubResource("LabelSettings_g0el2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MiniMap" type="CanvasLayer" parent="."]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="MiniMap"]
-position = Vector2(577.125, 320.375)
-scale = Vector2(295.75, 189.25)
+[node name="Control" type="Control" parent="MiniMap"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -322.0
+offset_right = 577.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="MiniMap/Control"]
+position = Vector2(578.062, 317.188)
+scale = Vector2(297.875, 191.625)
 mesh = SubResource("QuadMesh_2n1br")
 texture = ExtResource("9_8pu1g")
 
@@ -182,9 +428,17 @@ size = Vector2i(280, 173)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="MiniMap/SubViewportContainer/SubViewport"]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1.5246e-23, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -147.147, -66.836, 26.4239)
+transform = Transform3D(4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -147.147, -66.836, 26.4239)
 projection = 1
 fov = 117.5
 size = 600.0
 near = 10.0
 far = 300.0
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 1.26311, 10.4275, -75.098)
+shape = SubResource("BoxShape3D_ayicq")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

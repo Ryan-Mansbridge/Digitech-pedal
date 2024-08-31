@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxbktuxld6mcn"]
+
+[ext_resource type="Texture2D" uid="uid://diu82n86opwg1" path="res://DSC03368~2.jpg" id="1_3setd"]
+[ext_resource type="Script" path="res://bluewin.gd" id="1_dluh1"]
+[ext_resource type="FontFile" uid="uid://c3noig7ri6ggm" path="res://draco/Draco.otf" id="2_1jn76"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eodlu"]
+font = ExtResource("2_1jn76")
+font_size = 75
+shadow_size = 10
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="FontFile" id="FontFile_uawqt"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/32/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/32/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/32/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o0jxg"]
+font = SubResource("FontFile_uawqt")
+font_size = 60
+outline_size = 13
+
+[sub_resource type="FontFile" id="FontFile_3tcnj"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2xpue"]
+font = SubResource("FontFile_3tcnj")
+font_size = 60
+outline_size = 13
+
+[node name="Node" type="Node"]
+script = ExtResource("1_dluh1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dsc03368~2" type="Sprite2D" parent="Control"]
+position = Vector2(580.25, 434.5)
+scale = Vector2(-0.505, 0.382)
+texture = ExtResource("1_3setd")
+
+[node name="BlueWins" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+offset_right = 1117.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "WHITE WINS
+
+"
+label_settings = SubResource("LabelSettings_eodlu")
+horizontal_alignment = 1
+
+[node name="Continue" type="Label" parent="Control"]
+offset_left = 54.0
+offset_top = 484.0
+offset_right = 367.0
+offset_bottom = 583.0
+text = "CONTINUE"
+label_settings = SubResource("LabelSettings_o0jxg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="Control/Continue"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 2.0
+offset_right = 328.0
+offset_bottom = 99.0
+text = "Continue"
+
+[node name="Quit" type="Label" parent="Control"]
+offset_left = 46.0
+offset_top = 572.0
+offset_right = 371.0
+offset_bottom = 670.0
+text = "QUIT GAME"
+label_settings = SubResource("LabelSettings_2xpue")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="Control/Quit"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 322.0
+offset_bottom = 98.0
+text = "Quit"
+
+[connection signal="pressed" from="Control/Continue/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Control/Quit/Quit" to="." method="_on_quit_pressed"]
