@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_smtmg"]
 [ext_resource type="Texture2D" uid="uid://bqa34h74jk84u" path="res://DSCF8653.JPG" id="2_tuk18"]
-[ext_resource type="AudioStream" uid="uid://dwm2gpjvfst6y" path="res://menu music.mp3" id="3_wm71k"]
+[ext_resource type="AudioStream" uid="uid://dgg74bpt517ua" path="res://Smoking Menu Music.mp3" id="3_y1yhh"]
 [ext_resource type="FontFile" uid="uid://b0xfvoblvndam" path="res://hirosh/HIROSHT.TTF" id="4_t0arl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a5t0t"]
@@ -161,8 +161,8 @@ scale = Vector2(0.359835, 0.339563)
 texture = ExtResource("2_tuk18")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("3_wm71k")
-volume_db = -10.0
+stream = ExtResource("3_y1yhh")
+volume_db = 1.712
 autoplay = true
 
 [node name="Label6" type="Label" parent="Control"]
