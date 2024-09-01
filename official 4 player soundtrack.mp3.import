@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmd1m5pj7qy60"
+path="res://.godot/imported/official 4 player soundtrack.mp3-4312a1fdfbe4f75f54334d5fd2a11dca.mp3str"
+
+[deps]
+
+source_file="res://official 4 player soundtrack.mp3"
+dest_files=["res://.godot/imported/official 4 player soundtrack.mp3-4312a1fdfbe4f75f54334d5fd2a11dca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
